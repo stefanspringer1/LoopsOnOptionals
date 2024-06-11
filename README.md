@@ -6,11 +6,17 @@ Example when using the [SwiftXML](https://github.com/stefanspringer1/SwiftXML) l
 
 With the `LoopsOnOptionals` package you can write:
 
+When having the following extension to `XDocument`:
+
 ```swift
 extension XDocument {
    var metaDataSection: XElement? { ... }
 }
+```
 
+you might write:
+
+```swift
 for metaDataItem in myDocument.metaDataSection?.children("item") {
     ...
 }
@@ -19,10 +25,6 @@ for metaDataItem in myDocument.metaDataSection?.children("item") {
 Of course, especially in this simple case you can express the same as follows, without using the `LoopsOnOptionals` package:
 
 ```swift
-extension XDocument {
-   var metaDataSection: XElement? { ... }
-}
-
 if let metaDataSection = myDocument.metaDataSection {
     for metaDataItem in metaDataSection.children("item") {
         ...
