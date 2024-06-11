@@ -4,8 +4,6 @@ Mini library to extend optional chains to include for loops.
 
 Example when using the [SwiftXML](https://github.com/stefanspringer1/SwiftXML) library:
 
-With the `LoopsOnOptionals` package you can write:
-
 When having the following extension to `XDocument`:
 
 ```swift
@@ -14,7 +12,7 @@ extension XDocument {
 }
 ```
 
-you might write:
+then with the `LoopsOnOptionals` package you can write:
 
 ```swift
 for metaDataItem in myDocument.metaDataSection?.children("item") {
