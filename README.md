@@ -4,7 +4,7 @@ Mini library to extend optional chains to include for loops.
 
 Example when using the [SwiftXML](https://github.com/stefanspringer1/SwiftXML) library:
 
-When having the following extension to `XDocument`:
+When e.g. having the following extension to `XDocument`:
 
 ```swift
 extension XDocument {
